@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev #test测试环境、dev开发环境、prod生产环境
+
+management:
+  server:
+    port: 9001
+    ssl:
+      enabled: false
+  endpoints:
+    shutdown:
+      enabled: true
+    web:
+      exposure:
+        include: beans,mappings
